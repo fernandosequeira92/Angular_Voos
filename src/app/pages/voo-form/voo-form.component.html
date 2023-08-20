@@ -1,0 +1,162 @@
+<app-header></app-header>
+
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <mat-label>Identificador</mat-label>
+            <mat-icon matPrefix>subject</mat-icon>
+            <!-- <input matInput placeholder="ID" formControlName="id" [(ngModel)]=detail_voo.id readonly > -->
+            <input matInput placeholder="ID" formControlName="id" [(ngModel)]=identificador readonly >
+          </mat-form-field>
+        </div>
+        <!-- <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Data do Vôo:</mat-label>
+            <mat-icon matPrefix>calendar_today</mat-icon>
+            <input matInput placeholder="Data" formControlName="fldate" [(ngModel)]="detail_voo.fldate" readonly >
+          </mat-form-field>
+        </div> -->
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Detalhes do Vôo</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- LINHA 1 -->
+        <div class="row">
+          <div class="col">
+            <mat-form-field>
+              <mat-label>Data do Vôo:</mat-label>
+              <mat-icon matPrefix>calendar_today</mat-icon>
+              <input matInput placeholder="Data" formControlName="fldate" [(ngModel)]="detail_voo.fldate" readonly >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Companhia</mat-label>
+              <mat-icon matPrefix>business</mat-icon>
+              <input matInput placeholder="Companhia" formControlName="carrid" [(ngModel)]="detail_voo.carrid" readonly >
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Número do Vôo</mat-label>
+              <mat-icon matPrefix>flight_takeoff</mat-icon>
+              <input matInput placeholder="Código do Vôo" formControlName="connid" [(ngModel)]="detail_voo.connid" readonly >
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Modelo do Avião:</mat-label>
+              <mat-icon matPrefix>airplanemode_active</mat-icon>
+              <input matInput placeholder="Modelo do Avião" formControlName="planetype" [(ngModel)]="detail_voo.planetype" readonly >
+            </mat-form-field>
+          </div>
+        </div>
+      
+      <!-- LINHA 2 -->
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Moeda</mat-label>
+            <mat-icon matPrefix>monetization_on</mat-icon>
+            <input matInput placeholder="Moeda" formControlName="currency" [(ngModel)]="detail_voo.currency" readonly >
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Preço Unitário</mat-label>
+            <mat-icon matPrefix>money</mat-icon>
+            <input matInput placeholder="Preço" formControlName="price" [(ngModel)]="detail_voo.price" readonly >
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Preço Total</mat-label>
+            <mat-icon matPrefix>money</mat-icon>
+            <input matInput placeholder="Preço Total" formControlName="paymentsum" [(ngModel)]="detail_voo.paymentsum" readonly >
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Detalhes do Avião</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- LINHA 3 -->
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Quantidade de Assentos - Classe Econômica</mat-label>
+            <mat-icon matPrefix>airline_seat_legroom_normal</mat-icon>
+            <input matInput placeholder="seatsmax" formControlName="seatsmax" [(ngModel)]="detail_voo.seatsmax" readonly >
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Assentos Ocupados - Classe Econômica</mat-label>
+            <mat-icon matPrefix>airline_seat_legroom_normal</mat-icon>
+            <input matInput placeholder="seatsocc" formControlName="seatsocc" [(ngModel)]="detail_voo.seatsocc" readonly >
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- LINHA 4 -->
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Quantidade de Assentos - Classe Executiva</mat-label>
+            <mat-icon matPrefix>airline_seat_recline_extra</mat-icon>
+            <input matInput placeholder="seatmax_b" formControlName="seatmax_b" [(ngModel)]="detail_voo.seatmax_b" readonly >
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Assentos Ocupados - Classe Executiva</mat-label>
+            <mat-icon matPrefix>airline_seat_recline_extra</mat-icon>
+            <input matInput placeholder="seatsocc_b" formControlName="seatsocc_b" [(ngModel)]="detail_voo.seatsocc_b" readonly >
+          </mat-form-field>
+        </div>
+      </div>
+
+            <!-- LINHA 5 -->
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-label>Quantidade de Assentos - Primeira Classe</mat-label>
+                  <mat-icon matPrefix>airline_seat_individual_suite</mat-icon>
+                  <input matInput placeholder="seatmax_f" formControlName="seatmax_f" [(ngModel)]="detail_voo.seatmax_f" readonly >
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-label>Assentos Ocupados - Primeira Classe</mat-label>
+                  <mat-icon matPrefix>airline_seat_individual_suite</mat-icon>
+                  <input matInput placeholder="seatsocc_f" formControlName="seatsocc_f" [(ngModel)]="detail_voo.seatsocc_f" readonly >
+                </mat-form-field>
+              </div>
+            </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+
+<footer class="py-4 bg-dark text-white-50 login_footer">
+  <div class="container text-center">
+    <small>Copyright &copy; FAFSEQUEIRA DEV - MILLS © 2023</small>
+  </div>
+</footer>

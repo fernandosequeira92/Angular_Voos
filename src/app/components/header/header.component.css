@@ -1,0 +1,23 @@
+a,
+  a:visited,
+  a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+
+    #menu_button:hover {
+        color: #177de2;
+        transition: 0.5s;
+    } 
+
+    #menu_exit:hover {
+        color: #e21717;
+        transition: 0.5s;
+        cursor: pointer;
+    } 
+
+    a:not([href]):not([tabindex]) {
+      color: white;
+      text-decoration: none;
+  }

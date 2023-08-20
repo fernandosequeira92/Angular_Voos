@@ -1,0 +1,85 @@
+<!-- As a heading -->
+<style>
+  /* .background {
+    background-image: url('https://img.freepik.com/premium-photo/miniature-toy-airplane-colorful-paper-background_200694-69.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    width: 100%;
+  } */
+
+.login_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.windows_appear{
+opacity: 1;
+ position: relative;
+transition-duration: 1s;
+/* z-index: 1; */
+transform: scale(1,1);
+}
+
+
+.windows_close{
+opacity: 0;
+position: relative;
+transition-duration: 1s;
+transform: scale(0.5,0.5);
+/* z-index: 0; */
+}
+</style>
+
+
+<div class="background">
+  <!-- NAVBAR COM NOME DO SISTEMA -->
+  <nav class="navbar navbar-dark bg-dark p-md-12 d-flex justify-content-center">
+      <span class="navbar-brand mb-0 h1">GERÊNCIADOR DE VÔOS - SFLIGHT</span>
+  </nav>
+
+    <div id="emailBox" [class]="(isEmail) ? 'windows_appear' : 'windows_close'">
+      <app-login-email
+        *ngIf="isEmail !isSenha"
+        [im_email_v]=isEmail
+        (getEmailVisible)="getEmailBoxVisible($event)"
+        [im_senha_v]=isSenha
+        (getSenhaVisible)="getSenhaBoxVisible($event)"
+        [im_email]=lc_email
+        (getEmailEvent)="getEmail($event)"
+        [im_senha]=lc_senha
+        (getSenhaEvent)="getSenha($event)"
+      >
+      </app-login-email>
+    </div>
+
+    <div id="senhaBox" [class]="(isSenha) ? 'windows_appear' : 'windows_close'">
+      <app-login-senha
+        *ngIf="!isEmail isSenha"
+        [im_email] = (lc_email)
+        [im_senha] = (lc_senha)
+
+        [im_email_v]=isEmail
+        (getEmailVisible)="getEmailBoxVisible($event)"
+        [im_senha_v]=isSenha
+        (getSenhaVisible)="getSenhaBoxVisible($event)"
+        >
+      </app-login-senha>
+    </div>
+
+
+  <!-- FOOTER COM COPYRIGHT -->
+  <footer class="py-4 bg-dark text-white-50 login_footer">
+      <div class="container text-center">
+        <small>Copyright &copy; FAFSEQUEIRA DEV - MILLS © 2023</small>
+      </div>
+  </footer>
+
+
+  <router-outlet></router-outlet>
+
+
+
+
+

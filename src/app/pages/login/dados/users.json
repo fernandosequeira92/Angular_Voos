@@ -1,0 +1,111 @@
+[
+    {
+        "id": 1,
+        "firstname": "Fernando Sequeira",
+        "email": "fernandosequeira92@outlook.com",
+        "phone": "+55(21)97552-3262",
+        "senha": "florida",
+        "nivel": "administrador",
+        "status": "ativo"
+    },
+
+    {
+        "id": 2,
+        "firstname": "Cesar Calvet",
+        "email": "cesarcalvet92@outlook.com",
+        "phone": "+55(21)99703-0279",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 3,
+        "firstname": "Lucas Fiuza",
+        "email": "lucasdasilvafiuza14@outlook.com",
+        "phone": "+55(21)93211-2256",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 4,
+        "firstname": "Bernardo Rodrigues",
+        "email": "bepuncado@outlook.com",
+        "phone": "+55(21)99611-1314",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 5,
+        "firstname": "Alessandro Fidelis",
+        "email": "vulto@outlook.com",
+        "phone": "+55(21)99743-2115",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 6,
+        "firstname": "Rodrigo Barboza",
+        "email": "leklek@outlook.com",
+        "phone": "+55(11)99132-4009",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 7,
+        "firstname": "Marcelo Vicente",
+        "email": "marcelo.vicente@mills.com.br",
+        "phone": "+55(21)99111-4241",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 8,
+        "firstname": "Fabio Chida",
+        "email": "fabio.chida@mills.com.br",
+        "phone": "+55(11)98442-9766",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 9,
+        "firstname": "Natalino Moreira",
+        "email": "natalino.moreira@mills.com.br",
+        "phone": "+55(11)98007-5581",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 10,
+        "firstname": "Ricardo Macceu",
+        "email": "ricardo.macceu@mills.com.br",
+        "phone": "+55(11)92533-1266",
+        "senha": "florida",
+        "nivel": "usuario",
+        "status": "ativo"
+    },
+
+    {
+        "id": 11,
+        "firstname": "Teste",
+        "email": "a",
+        "phone": "a",
+        "senha": "a",
+        "nivel": "administrador",
+        "status": "ativo"
+    }
+]

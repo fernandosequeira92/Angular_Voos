@@ -1,0 +1,66 @@
+<style>
+  .button_back {
+    margin-right: 5px;
+    border-radius: 25px;
+    border-radius: 25px;
+    background-color: chocolate;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    box-shadow: 2px 2px 4px #000000;
+  }
+  .button_next {
+    margin-right: 5px;
+    border-radius: 25px;
+  }
+
+  .card-container {  
+  padding-left: 25%;
+}
+</style>
+  
+  <section class="container-md p-md-12 d-flex justify-content-center bd-highlight mb-3">
+    <div class="col-md-4" id="jumbotron_customA">
+      <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+        <mat-card class="shipping-card">
+          <mat-card-header class="card-container">
+            <mat-card-title >LOGIN - Portal do Usuário</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="row">
+              <div class="col">
+                <mat-card-subtitle style="padding-top:15px"> 
+                  ✉ E-mail: {{im_email}}
+                </mat-card-subtitle>
+                <mat-form-field class="full-width">
+                  <mat-label>Senha</mat-label>
+                  <mat-icon matPrefix>key</mat-icon>
+                  <input matInput placeholder="Digite a sua senha." formControlName="senha" type="password" ngModel>
+                    <!-- Campo Vazio -->
+                    <mat-error *ngIf="addressForm.controls['senha'].hasError('required')">
+                      <mat-icon>close</mat-icon>
+                      A senha é <strong>obrigatória</strong>.
+                    </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <!-- <button mat-raised-button color="primary"> -->
+            <div (click)="onVoltar()" class="button_back">
+              <a><mat-icon matSuffix>keyboard_return</mat-icon></a>
+            </div>
+            <button mat-raised-button color="primary" (click)="onValidar()" type="submit" class="button_next">
+              Entrar
+              <mat-icon matSuffix>login</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </form>
+      </div>
+  </section>
+  
+  
+  
+  

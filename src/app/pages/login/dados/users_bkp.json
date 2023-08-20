@@ -1,0 +1,51 @@
+{
+"users": [
+    {
+        "id": 1,
+        "firstname": "Fernando Augusto",
+        "email": "fernandosequeira92@outlook.com",
+        "phone": "+55(21)97552-3262",
+        "senha": "florida"
+    },
+
+    {
+        "id": 2,
+        "firstname": "Cesar Augusto",
+        "email": "cesarcalvet92@outlook.com",
+        "phone": "+55(21)99703-0279",
+        "senha": "florida"
+    },
+
+    {
+        "id": 3,
+        "firstname": "Lucas Fiuza",
+        "email": "lucasdasilvafiuza14@outlook.com",
+        "phone": "+55(21)93211-2256",
+        "senha": "florida"
+    },
+
+    {
+        "id": 4,
+        "firstname": "Bernardo Rodrigues",
+        "email": "bepuncado@outlook.com",
+        "phone": "+55(21)99611-1314",
+        "senha": "florida"
+    },
+
+    {
+        "id": 5,
+        "firstname": "Alessandro Fidelis",
+        "email": "vulto@outlook.com",
+        "phone": "+55(21)99743-2115",
+        "senha": "florida"
+    },
+
+    {
+        "id": 6,
+        "firstname": "Rodrigo Barboza",
+        "email": "leklek@outlook.com",
+        "phone": "+55(11)99132-4009",
+        "senha": "florida"
+    }
+]
+}

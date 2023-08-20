@@ -1,0 +1,66 @@
+<style>
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: scale(1.5,1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1,1);
+    opacity: 1;
+  }
+}
+
+.card-container {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  
+  /* background: #333; */
+  padding-left: 25%;
+  transform: scale(1,1);
+  opacity: 1;
+}
+</style>
+
+<section class="container-md p-md-12 d-flex justify-content-center bd-highlight mb-3">
+  <div class="col-md-4" id="jumbotron_customA">
+    <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+      <mat-card class="shipping-card">
+        <mat-card-header class="card-container">
+            <mat-card-title>LOGIN - Portal do Usuário</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <mat-label>E-mail</mat-label>
+                <mat-icon matPrefix>email</mat-icon>
+                <input matInput placeholder="Digite o seu e-mail." formControlName="email" email="true" ngModel>
+                  <!-- Campo Vazio -->
+                  <!-- <mat-error *ngIf="addressForm.controls['email'].hasError('required')"> -->
+                    <mat-error *ngIf="email.invalid">
+                    <mat-icon>close</mat-icon>
+                    {{getErrorMessage()}}
+                  </mat-error>
+                  <!-- <mat-error *ngIf="addressForm.controls['email'].hasError('error')">
+                    <strong>Formato</strong>incorreto.
+                  </mat-error> -->
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions >
+          <button mat-raised-button color="primary" type="submit">
+            Entrar
+            <mat-icon matSuffix>login</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    </div>
+</section>
+
+
+
+
+
